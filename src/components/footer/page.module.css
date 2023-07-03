@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+.socialLincs {
+  display: flex;
+  gap: 10px;
+}
+
+.socialLincItem {
+  width: 15px;
+  height: 15px;
+  position: relative;
+}
