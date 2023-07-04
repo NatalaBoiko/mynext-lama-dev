@@ -20,7 +20,7 @@ const Navbar = () => {
         })}
       </ul>
 
-      <Button className={styles.navBtn} />
+      <Button className={styles.navBtn} title="log out" />
     </header>
   );
 };
