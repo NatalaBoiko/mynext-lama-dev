@@ -20,7 +20,8 @@ const Navbar = () => {
         })}
       </ul>
 
-      <Button className={styles.navBtn} title="log out" />
+      <Button href="/" className={styles.navBtn} title="log out" />
+      {/* <button className={styles.navBtn}>Logout</button> */}
     </header>
   );
 };
