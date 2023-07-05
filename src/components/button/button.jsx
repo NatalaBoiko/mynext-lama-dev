@@ -6,8 +6,7 @@ import styles from "./page.module.css";
 const Button = ({ className, title }) => {
   return (
     <button
-      className={className ? `${className}` : styles.button}
-      // className={`${styles.button} ${className}`}
+      className={`${styles.button} ${className}`}
       onClick={() => {
         console.log("logged out");
       }}
