@@ -14,8 +14,6 @@ const Contacts = () => {
             src="/contact.png"
             alt="contacts image"
             fill={true}
-            // width={500}
-            // height={500}
             className={styles.image}
           />
         </div>
