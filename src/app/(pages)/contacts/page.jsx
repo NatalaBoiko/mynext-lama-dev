@@ -2,6 +2,7 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import React from "react";
 import styles from "./page.module.css";
+import contactImg from "../../../../public/contact.png";
 
 const Contacts = () => {
   return (
@@ -10,7 +11,7 @@ const Contacts = () => {
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
-            src="/contact.png"
+            src={contactImg}
             alt="contacts image"
             fill={true}
             className={styles.image}
