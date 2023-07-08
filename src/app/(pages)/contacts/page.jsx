@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 const Contacts = () => {
   return (
     <>
-      <h1>hello!</h1>
+      <h1>Let's Keep in Touch</h1>
     </>
   );
 };
