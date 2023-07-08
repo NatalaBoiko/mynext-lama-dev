@@ -2,41 +2,46 @@ import Button from "@/components/button/button";
 import Image from "next/image";
 import React from "react";
 import styles from "./page.module.css";
+import { portfolioData } from "@/data/portfolioData";
+import { notFound } from "next/navigation";
+
+const getData = (cat) => {
+  const data = portfolioData[cat];
+
+  if (!data) {
+    return notFound();
+  } else {
+    return data;
+  }
+};
 
 const Category = ({ params }) => {
+  const data = getData(params.category);
+  console.log(data);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.categoryTitle}>{params.category}</h1>
-      <div className={styles.item}>
-        <div className={styles.content}>
-          <h2>test</h2>
-          <p>descr</p>
-          <Button href="/" title="See more" />
-        </div>
-        <div className={styles.imgContainer}>
-          <Image
-            src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
-            alt="qwe"
-            fill={true}
-            className={styles.image}
-          />
-        </div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.content}>
-          <h2>test</h2>
-          <p>descr</p>
-          <Button href="/" title="See more" />
-        </div>
-        <div className={styles.imgContainer}>
-          <Image
-            src="https://images.pexels.com/photos/3130810/pexels-photo-3130810.jpeg"
-            alt="qwe"
-            fill={true}
-            className={styles.image}
-          />
-        </div>
-      </div>
+      <ul>
+        {data.map(({ id, title, desc, image }) => {
+          return (
+            <li key={id} className={styles.item}>
+              <div className={styles.content}>
+                <h2>{title}</h2>
+                <p>{desc}</p>
+              </div>
+              <div className={styles.imgContainer}>
+                <Image
+                  src={image}
+                  alt={title}
+                  fill={true}
+                  className={styles.image}
+                />
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

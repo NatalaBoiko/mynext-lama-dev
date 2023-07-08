@@ -23,6 +23,16 @@
   gap: 20px;
   justify-content: center;
 }
+
+.content h2 {
+  font-size: 50px;
+}
+
+.content p {
+  text-align: justify;
+  font-size: 20px;
+}
+
 .categoryTitle {
   color: #53c28b;
 }

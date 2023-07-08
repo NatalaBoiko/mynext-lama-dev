@@ -15,7 +15,7 @@ export const portfolioLinks = [
   {
     id: "3",
     title: "Application",
-    href: "portfolio/application",
+    href: "portfolio/applications",
     imgSrc: "/apps.jpg",
   },
 ];
