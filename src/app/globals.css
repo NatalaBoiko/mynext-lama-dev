@@ -17,11 +17,25 @@ body {
   scroll-behavior: smooth;
 }
 
+/* .theme {
+  transition: 2s all ease;
+} */
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 60px;
+  padding: 32px 60px;
 }
 
 main,
