@@ -23,26 +23,3 @@ export default function Home() {
     </section>
   );
 }
-
-// ===
-// Image from public foulder doesn't need written width and height attributes.  We can write it in the styles folder
-
-//  <Image src={Hero} alt="qwe" />
-
-// ===
-//image somevhere from browser needs config in next.config.js
-
-// === next.config.js ===
-// const nextConfig = {
-//   images: {
-//     domains: ["images.pexels.com", "images.pexels.com"],
-//   },
-// };
-
-// ===
-// <Image
-//       src="https://images.pexels.com/photos/17336461/pexels-photo-17336461.jpeg?auto=compress&cs=tinysrgb&w=800"
-//       alt=""
-//       width={200}
-//       height={250}
-//     />
