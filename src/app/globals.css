@@ -17,9 +17,14 @@ body {
   scroll-behavior: smooth;
 }
 
-/* .theme {
+.theme {
+  width: 100%;
   transition: 2s all ease;
-} */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .light {
   background-color: white;
