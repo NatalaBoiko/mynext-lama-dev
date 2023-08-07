@@ -20,10 +20,10 @@ const Blog = async () => {
 
   return (
     <ul>
-      {data.map(({ body, id, title, userId }) => {
+      {data.map(({ body, id, title }) => {
         return (
           <li key={id}>
-            <Link href={`/blog/${userId}`} className={styles.container}>
+            <Link href={`/blog/${id}`} className={styles.container}>
               <div className={styles.imageContainer}>
                 <Image
                   src="https://images.pexels.com/photos/1317559/pexels-photo-1317559.jpeg?auto=compress&cs=tinysrgb&w=800"
