@@ -1,9 +1,10 @@
-import Button from "@/components/button/button";
 import Image from "next/image";
 import React from "react";
 import styles from "./page.module.css";
 import { portfolioData } from "@/data/portfolioData";
 import { notFound } from "next/navigation";
+
+// console.log(portfolioData);
 
 const getData = (cat) => {
   const data = portfolioData[cat];
