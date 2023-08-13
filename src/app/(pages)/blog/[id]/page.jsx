@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 
 async function getData(id) {
-  const res = await fetch(`${process.env.DB_URL}/${id}`, {
+  const res = await fetch(`${process.env.DB_URL}/api/posts/${id}`, {
     cache: "no-store",
   });
   // console.log(res.json());
