@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 async function getData() {
-  const res = await fetch(process.env.DB_URL, {
+  const res = await fetch(`${process.env.DB_URL}`, {
     cache: "no-store",
   });
   // console.log(res);
