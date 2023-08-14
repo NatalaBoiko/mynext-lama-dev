@@ -3,6 +3,11 @@ import Image from "next/image";
 import React from "react";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "About",
+  description: "This is the About page",
+};
+
 const About = () => {
   return (
     <>

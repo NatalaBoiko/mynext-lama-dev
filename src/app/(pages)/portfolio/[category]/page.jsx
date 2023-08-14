@@ -16,9 +16,25 @@ const getData = (cat) => {
   }
 };
 
+export async function generateMetadata({ params }) {
+  // console.log(params);
+  const data = await getData(params.category);
+  const descr = data
+    .map((item) => {
+      // console.log(item.title);
+      return [item.title];
+    })
+    .join(". ");
+
+  return {
+    title: params.category,
+    description: descr,
+  };
+}
+
 const Category = ({ params }) => {
   const data = getData(params.category);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className={styles.container}>

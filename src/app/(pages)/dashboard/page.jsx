@@ -5,6 +5,11 @@ import styles from "./page.module.css";
 
 import useSWR from "swr";
 
+export const metadata = {
+  title: "Dashboard",
+  description: "This is the Dashboard page",
+};
+
 const Dashboard = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error, isLoading } = useSWR(

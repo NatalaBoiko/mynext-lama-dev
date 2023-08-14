@@ -4,6 +4,11 @@ import styles from "./page.module.css";
 import { portfolioLinks } from "@/data/portfolioLinks";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Portfolio",
+  description: "This is the Portfolio page",
+};
+
 const Portfolio = () => {
   return (
     <>
