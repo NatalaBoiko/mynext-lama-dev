@@ -17,9 +17,9 @@ async function getData(id) {
 }
 
 const BlogPost = async ({ params }) => {
-  console.log(params);
+  // console.log(params);
   const { username, title, content, img } = await getData(params.id);
-  console.log(username);
+  // console.log(username);
 
   return (
     <>

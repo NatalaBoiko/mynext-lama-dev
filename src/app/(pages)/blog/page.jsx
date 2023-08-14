@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-async function getData() {
+const getData = async () => {
   const res = await fetch(`${process.env.DB_URL}/api/posts`, {
     cache: "no-store",
   });
@@ -13,10 +13,12 @@ async function getData() {
   }
 
   return res.json();
-}
+};
+
+const data = await getData();
+console.log(data);
 
 const Blog = async () => {
-  const data = await getData();
   return (
     <ul>
       {data.map(({ _id, title, description, img }) => {
