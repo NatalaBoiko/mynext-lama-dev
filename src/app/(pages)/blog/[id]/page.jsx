@@ -3,27 +3,27 @@ import { notFound } from "next/navigation";
 import React from "react";
 import styles from "./page.module.css";
 
-async function getData(id) {
-  const res = await fetch(`${process.env.DB_URL}/api/posts/${id}`, {
-    cache: "no-store",
-  });
-  // console.log(res.json());
+// async function getData(id) {
+//   const res = await fetch(`${process.env.DB_URL}/api/posts/${id}`, {
+//     cache: "no-store",
+//   });
+//   // console.log(res.json());
 
-  if (!res.ok) {
-    return notFound();
-  }
+//   if (!res.ok) {
+//     return notFound();
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
 const BlogPost = async ({ params }) => {
   // console.log(params);
-  const { username, title, content, img } = await getData(params.id);
+  // const { username, title, content, img } = await getData(params.id);
   // console.log(username);
 
   return (
     <>
-      <div className={styles.top}>
+      {/* <div className={styles.top}>
         <div className={styles.info}>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.desc}>{content}</p>
@@ -44,7 +44,7 @@ const BlogPost = async ({ params }) => {
       </div>
       <div className={styles.content}>
         <p className={styles.text}>{content}</p>
-      </div>
+      </div> */}
     </>
   );
 };
