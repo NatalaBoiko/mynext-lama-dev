@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 
 import useSWR from "swr";
+import Head from "next/head";
 
 // export const metadata = {
 //   title: "Dashboard",
@@ -19,7 +20,15 @@ const Dashboard = () => {
 
   // console.log(data);
 
-  return <h1 className={styles.main}>Dashboard</h1>;
+  return (
+    <>
+      <Head>
+        <title>Dashboard</title>
+        <meta name="description" content="This is the Dashboard page" />
+      </Head>
+      <h1 className={styles.main}>Dashboard</h1>;
+    </>
+  );
 };
 
 export default Dashboard;
