@@ -3,25 +3,25 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
-// const getData = async () => {
-//   const res = await fetch(`${process.env.DB_URL}/api/posts`, {
-//     cache: "no-store",
-//   });
-//   // console.log(res);
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
+const getData = async () => {
+  const res = await fetch(`${process.env.DB_URL}/api/posts`, {
+    cache: "no-store",
+  });
+  // console.log(res);
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
-// const data = await getData();
+const data = await getData();
 // console.log(data);
 
 const Blog = async () => {
   return (
     <ul>
-      {/* {data.map(({ _id, title, description, img }) => {
+      {data.map(({ _id, title, description, img }) => {
         return (
           <li key={_id}>
             <Link href={`/blog/${_id}`} className={styles.container}>
@@ -41,7 +41,7 @@ const Blog = async () => {
             </Link>
           </li>
         );
-      })} */}
+      })}
     </ul>
   );
 };
