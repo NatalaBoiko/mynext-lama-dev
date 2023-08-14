@@ -23,7 +23,7 @@ const getData = async () => {
 const data = await getData();
 // console.log(data);
 
-const Blog = async () => {
+const Blog = () => {
   return (
     <ul>
       {data.map(({ _id, title, description, img }) => {
