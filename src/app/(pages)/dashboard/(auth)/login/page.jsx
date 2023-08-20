@@ -2,17 +2,19 @@
 
 import React from "react";
 import styles from "./page.module.css";
-import { signIn, signOut, useSession } from "next-auth/react";
-import Button from "@/components/button/button";
+import { useRouter } from "next/navigation";
+import { signIn, useSession } from "next-auth/react";
 
 const Login = () => {
   const session = useSession();
+  const router = useRouter();
 
-  // if (session.data) {
-  //   console.log(session.data.user);
-  // } else {
-  //   console.log("logged out");
-  // }
+  if (session.status === "loading") {
+    return <p>Loading...</p>;
+  }
+  if (session.status === "authenticated") {
+    router?.push("/dashboard");
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
