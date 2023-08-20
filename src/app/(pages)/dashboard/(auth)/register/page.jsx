@@ -27,10 +27,13 @@ const Register = () => {
         }),
       });
 
+      console.log(response.body);
+
       response.status === 201 &&
         router.push("/dashboard/login?success=Account has been created");
-    } catch (error) {
+    } catch (err) {
       setErr(true);
+      console.log(err);
     }
   };
 
@@ -64,7 +67,9 @@ const Register = () => {
       </form>
 
       {err && "Something went wrong ((("}
-      <Link href="/dashboard/login">Login with an existing account</Link>
+      <Link href="/dashboard/login" className={styles.link}>
+        Login with an existing account
+      </Link>
     </>
   );
 };

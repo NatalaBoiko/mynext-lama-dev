@@ -1,0 +1,38 @@
+.title {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #bbb;
+}
+
+.btn {
+  padding: 20px;
+  cursor: pointer;
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  /* width: max-content; */
+
+  /* font-size: 20px;
+    font-weight: bold; */
+  color: white;
+}
+
+.link {
+  color: white;
+}
