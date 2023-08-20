@@ -19,7 +19,7 @@ body {
 
 .theme {
   width: 100%;
-  transition: 2s all ease;
+  /* transition: 2s all ease; */
   height: 100vh;
   display: flex;
   flex-direction: column;
