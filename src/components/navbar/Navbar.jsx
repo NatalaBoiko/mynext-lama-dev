@@ -26,12 +26,9 @@ const Navbar = () => {
       </ul>
 
       {session.status === "authenticated" && (
-        <Button
-          href="/dashboard/register"
-          className={styles.navBtn}
-          title="log out"
-          onClick={signOut}
-        />
+        <button className={styles.navBtn} onClick={signOut}>
+          Log out
+        </button>
       )}
     </header>
   );
