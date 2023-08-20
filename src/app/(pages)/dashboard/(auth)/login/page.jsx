@@ -8,11 +8,11 @@ import Button from "@/components/button/button";
 const Login = () => {
   const session = useSession();
 
-  if (session.data) {
-    console.log(session.data.user);
-  } else {
-    console.log("logged out");
-  }
+  // if (session.data) {
+  //   console.log(session.data.user);
+  // } else {
+  //   console.log("logged out");
+  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
